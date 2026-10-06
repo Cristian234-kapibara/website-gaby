@@ -1,0 +1,822 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0d0b12;
+    color: white;
+}
+
+
+/* =========================
+   Prima pagina
+   ========================= */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #3b193f 0%,
+            #0d0b12 55%
+        );
+}
+
+.content {
+    max-width: 700px;
+    padding: 30px;
+}
+
+.small-text {
+    font-size: 13px;
+    letter-spacing: 5px;
+
+    color: #d8a6d8;
+
+    margin-bottom: 25px;
+}
+
+h1 {
+    font-size: 60px;
+    line-height: 1.1;
+
+    margin-bottom: 25px;
+}
+
+.description {
+    font-size: 18px;
+
+    color: #c9c5cc;
+
+    margin-bottom: 35px;
+}
+
+
+/* =========================
+   Buton
+   ========================= */
+
+button {
+    border: none;
+
+    padding: 15px 35px;
+
+    border-radius: 30px;
+
+    background: white;
+    color: #171219;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.08);
+}
+
+
+/* =========================
+   A doua pagina
+   ========================= */
+
+.message {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 40px;
+
+    background: #120d16;
+
+    opacity: 0;
+
+    transform: translateY(50px);
+
+    transition: 1s;
+}
+
+.message.show {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+.message-content {
+    max-width: 650px;
+}
+
+.message h2 {
+    font-size: 45px;
+
+    margin-bottom: 30px;
+}
+
+.message p {
+    color: #c9c5cc;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   Telefon
+   ========================= */
+
+@media (max-width: 600px) {
+
+    h1 {
+        font-size: 40px;
+    }
+
+    .description {
+        font-size: 16px;
+    }
+
+    .message h2 {
+        font-size: 32px;
+    }
+
+    .message p {
+        font-size: 16px;
+    }
+
+    .small-text {
+        font-size: 10px;
+        letter-spacing: 3px;
+    }
+
+}
+
+
+/* =========================
+   Fotografii
+   ========================= */
+
+   .photos {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 80px 30px;
+
+    background: #0d0b12;
+}
+
+.photos-content {
+    max-width: 1100px;
+    width: 100%;
+}
+
+.photos h2 {
+    font-size: 45px;
+    margin-bottom: 50px;
+}
+
+.photo-gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 35px;
+
+    flex-wrap: wrap;
+}
+
+.photo-card {
+    width: 280px;
+
+    padding: 12px 12px 25px;
+
+    background: #f5f1e8;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+
+    transition: 0.4s;
+}
+
+.photo-card img {
+    width: 100%;
+    height: 280px;
+
+    object-fit: cover;
+
+    display: block;
+
+    margin-bottom: 15px;
+}
+
+.photo-card p {
+    color: #222;
+
+    font-family: Georgia, serif;
+
+    font-size: 16px;
+}
+
+.photo-card:hover {
+    transform: translateY(-15px) rotate(0deg) scale(1.03);
+}
+
+
+/* Inclinare */
+
+.photo1 {
+    transform: rotate(-4deg);
+}
+
+.photo2 {
+    transform: rotate(3deg);
+}
+
+.video-card {
+    transform: rotate(-2deg);
+}
+
+
+
+/*Video in galerie */
+
+.video-card video {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 15px;
+    background: #000;
+}
+
+@media (max-width: 600px) {
+    .video-card video {
+        height: 280px;
+    }
+}
+
+
+/* Telefon */
+
+@media (max-width: 600px) {
+
+    .photos {
+        padding: 60px 20px;
+    }
+
+    .photos h2 {
+        font-size: 32px;
+    }
+
+    .photo-card {
+        width: 280px;
+    }
+
+}
+/* =========================
+   СВЕЧЕНИЕ
+   ========================= */
+
+   .hero {
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(139, 45, 139, 0.35) 0%,
+            rgba(59, 25, 63, 0.2) 30%,
+            #0d0b12 70%
+        );
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+
+    animation: glow 4s ease-in-out infinite;
+}
+
+
+/* Свечение заголовка */
+
+h1 {
+    text-shadow:
+        0 0 10px rgba(255, 160, 255, 0.4),
+        0 0 25px rgba(190, 70, 190, 0.25);
+}
+
+
+/* =========================
+   ПАДАЮЩИЕ СЕРДЕЧКИ
+   ========================= */
+
+.hearts {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: 10;
+}
+
+.heart {
+    position: absolute;
+
+    top: -50px;
+
+    color: #ff9edb;
+
+    font-size: 20px;
+
+    opacity: 0.7;
+
+    filter:
+        drop-shadow(0 0 5px rgba(255, 100, 200, 0.8))
+        drop-shadow(0 0 12px rgba(255, 100, 200, 0.4));
+
+    animation: fall linear forwards;
+}
+
+
+/* Падение */
+
+@keyframes fall {
+
+    0% {
+        transform:
+            translateY(-50px)
+            rotate(0deg);
+
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.8;
+    }
+
+    90% {
+        opacity: 0.7;
+    }
+
+    100% {
+        transform:
+            translateY(110vh)
+            rotate(360deg);
+
+        opacity: 0;
+    }
+}
+
+
+/* Свечение */
+
+@keyframes glow {
+
+    0% {
+        filter: drop-shadow(
+            0 0 0 rgba(255, 100, 220, 0)
+        );
+    }
+
+    50% {
+        filter: drop-shadow(
+            0 0 20px rgba(255, 100, 220, 0.15)
+        );
+    }
+
+    100% {
+        filter: drop-shadow(
+            0 0 0 rgba(255, 100, 220, 0)
+        );
+    }
+}
+/* MESAJUL SECRET */
+
+.secret-card-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 80px 20px;
+    background: #120d16;
+}
+
+
+
+.secret-card {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 40px;
+    perspective: 1000px;
+    cursor: pointer;
+
+}
+
+.card-inner {
+    position: relative;
+    min-height: 400px;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+
+.secret-card.open .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(145deg, #241326, #120d16);
+    border: 1px solid rgba(255, 77, 141, 0.4);
+    font-size: 80px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+    transition: 0.3s;
+
+}
+
+.secret-card:hover .card-front {
+    box-shadow: 0 20px 60px rgba(255, 77, 141, 0.25);
+    transform: scale(1.02);
+}
+.card-front,
+.card-message {
+    position: absolute;
+    width: 100%;
+    min-height: 400px;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+
+.card-front p {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #c9c5cc;
+}
+
+.card-message {
+    transform: rotateY(180deg);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 45px 35px;
+    background: #f5f1e8;
+    color: #241b25;
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+.card-message h2 {
+    font-size: 32px;
+    margin: 20px 0;
+}
+
+.card-message p {
+    color: #4a4149;
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.card-message .small-text {
+    color: #9b4265;
+}
+
+.card-message span {
+    margin-top: 20px;
+    font-family: Georgia, serif;
+    font-size: 18px;
+}
+/* Telefon */
+
+@media (max-width: 600px) {
+
+    .secret-card-section {
+        min-height: 100vh;
+        padding: 60px 15px;
+    }
+
+
+    .secret-card {
+        width: 100%;
+        max-width: 340px;
+        margin-top: 30px;
+    }
+
+    .card-inner {
+        min-height: 360px;
+    }
+
+    .card-front,
+    .card-message {
+        min-height: 360px;
+        border-radius: 16px;
+    }
+
+    .card-front {
+        font-size: 65px;
+    }
+
+    .card-front p {
+        font-size: 16px;
+    }
+
+    .card-message {
+        padding: 30px 22px;
+    }
+
+    .card-message h2 {
+        font-size: 24px;
+        line-height: 1.3;
+        margin: 15px 0;
+    }
+
+    .card-message p {
+        font-size: 15px;
+        line-height: 1.6;
+        margin-bottom: 12px;
+    }
+
+    .card-message span {
+        font-size: 16px;
+        margin-top: 12px;
+    }
+}
+/* Inimioara interactivă */
+
+.heart-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+    background: #0d0b12;
+}
+
+.heart-section h2 {
+    font-size: 42px;
+    margin: 20px 0 40px;
+}
+
+.big-heart {
+    font-size: 130px;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.2s;
+    filter: drop-shadow(0 0 20px rgba(255, 77, 141, 0.5));
+}
+
+.big-heart:hover {
+    transform: scale(1.1);
+}
+
+.big-heart:active {
+    transform: scale(1.35);
+}
+
+.heart-message {
+    min-height: 30px;
+    margin-top: 30px;
+    color: #c9c5cc;
+    font-size: 18px;
+    transition: 0.4s;
+}
+
+/* Telefon */
+
+@media (max-width: 600px) {
+
+    .heart-section h2 {
+        font-size: 32px;
+    }
+
+    .big-heart {
+        font-size: 100px;
+    }
+
+    .heart-message {
+        font-size: 16px;
+    }
+}
+
+/* PAGINA FINALĂ */
+
+.final-section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 25px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #241326 0%,
+            #120d16 45%,
+            #09070c 100%
+        );
+}
+
+.final-content {
+    max-width: 700px;
+}
+
+.final-content h2 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin: 25px 0 35px;
+}
+
+.final-content p:not(.small-text) {
+    color: #c9c5cc;
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.final-heart {
+    font-size: 90px;
+    margin: 35px 0;
+    animation: finalHeart 1.5s infinite;
+    filter: drop-shadow(0 0 25px rgba(255, 77, 141, 0.7));
+}
+
+.final-content h3 {
+    font-family: Georgia, serif;
+    font-size: 28px;
+    font-weight: normal;
+}
+
+@keyframes finalHeart {
+
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+}
+
+/* TELEFON */
+
+@media (max-width: 600px) {
+
+    .final-content h2 {
+        font-size: 34px;
+    }
+
+    .final-content p:not(.small-text) {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    .final-heart {
+        font-size: 70px;
+    }
+
+    .final-content h3 {
+        font-size: 24px;
+    }
+}
+
+.scroll-to-heart {
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+}
+
+.scroll-to-heart button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+
+    background: transparent;
+    border: none;
+    box-shadow: 0 0 25px rgba(255, 77, 141, 0.5);
+    color: #ffffff;
+    cursor: pointer;
+
+    font-size: 28px;
+    animation: arrowToHeart 1.5s infinite;
+}
+
+.scroll-to-heart button span {
+    font-size: 14px;
+    color: #c9c5cc;
+}
+
+.scroll-to-heart button:hover {
+    color: #ff4d8d;
+}
+
+@keyframes arrowToHeart {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(8px);
+    }
+}
+
+@media (max-width: 600px) {
+    .scroll-to-heart {
+        margin-top: 40px;
+    }
+
+    .scroll-to-heart button {
+        font-size: 25px;
+    }
+}
+
+.scroll-to-final {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.scroll-to-final button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    background: transparent;
+    border: none;
+    box-shadow: 0 0 25px rgba(255, 77, 141, 0.5);
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 28px;
+    animation: arrowToFinal 1.5s infinite;
+}
+
+.scroll-to-final button span {
+    font-size: 14px;
+    color: #c9c5cc;
+}
+
+.scroll-to-final button:hover {
+    color: #ff4d8d;
+}
+
+@keyframes arrowToFinal {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(8px);
+    }
+}
+
+@media (max-width: 600px) {
+    .scroll-to-final {
+        margin-top: 40px;
+    }
+
+    .scroll-to-final button {
+        font-size: 25px;
+    }
+}
