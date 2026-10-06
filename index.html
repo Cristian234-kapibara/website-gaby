@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pentru tine ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="hearts"></div>
+
+    <!--Prima pagina-->
+    <section class="hero" id="home">
+
+        <div class="content">
+
+            <p class="small-text">PENTRU CEA MAI SPECIALĂ</p>
+
+            <h1>La mulți ani,<br>iubita ❤️</h1>
+
+            <p class="description">
+                Eu am pregătit pentru tine o mică surpriză...
+            </p>
+
+            <button onclick="openGift()">
+                Deschide ❤️
+            </button>
+
+        </div>
+
+    </section>
+
+    <!--A doua pagina-->
+    <section class="message" id="message">
+
+        <div class="message-content">
+
+            <p class="small-text">
+                O SCURTĂ SCRISOARE
+            </p>
+
+            <h2>
+                Asta tot pentru tine ❤️
+            </h2>
+
+            <p>
+                Azi e cea mai importantă zi, pentru că Azi
+                te-ai născut tu.
+            </p>
+
+            <p>
+                Îmi doresc, ca această zi să-ți aducă tot atâtea zâmbete,
+                câte mi-ai dăruit tu mie.
+            </p>
+
+            <button onclick="openPhotos()">
+                Momentele noastre 📸
+            </button>
+
+        </div>
+
+    </section>
+
+    <!--A treia pagina-->
+    <section class="photos">
+
+        <div class="photos-content"
+
+        <p class="small-text">
+            MOMENTELE NOASTRE
+        </p>
+
+        <h2>
+            Câteva amintiri ❤️
+        </h2>
+
+        <div class="photo-gallery">
+            <div class="photo-card photo1">
+                <img src="images/image2.jpg" alt="Primul nostru moment">
+                <p>Primul nostru moment ❤️</p>
+
+        </div>
+
+        <div class="photo-card photo2">
+            <img src="images/image1.jpg" alt="Una dintre zilele momentele preferate">
+            <p>Una dintre momentele noastre preferate</p>
+        </div>
+
+        <div class="photo-card video-card">
+
+            <video controls>
+                <source src="videos/Video1.MP4" type="video/MP4">
+            </video>
+            
+            <p>Și încă un moment ❤️</p>
+        </div>
+
+        <div class="scroll-down">
+            <button onclick="scrollToSecret()">
+                <span>Asta nu e tot ❤️</span>
+            
+            </button>
+
+        </div>
+
+
+
+    </section>
+
+    <!--A patra pagina-->
+
+    <section class="secret-card-section">
+        <p class="small-text">P.S. 💌</p>
+
+        <div class="secret-card" id="secretCard" onclick="openSecretCard()">
+            <div class="card-inner">
+                <div class="card-front">
+                    💌
+                    <p>Deschide pe mine</p>
+                </div>
+
+                <div class="card-message">
+                    <p class="small-text">DOAR PENTRU TINE ❤️</p>
+                    <h2>Ești cea mai frumoasă coincidență a mea.</h2>
+                    <p>
+                        Îți mulțumesc pentru fiecare clipă, pentru fiecare zâmbet și
+                        pentru că exiști în viața mea.
+                    </p>
+
+                    <p>
+                        Sper să avem parte de multe alte momente fericite împreună. ❤️
+                    </p>
+                    
+                    <span>Cu dragoste ❤️</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-to-heart">
+            <button onclick="scrollToHeart()">
+
+                <span>Mai este încă ceva ❤️</span>
+            </button>
+        </div>
+
+
+    </section>
+
+    <!-- Inimioara interactivă -->
+<section class="heart-section">
+
+    <p class="small-text">ÎNCĂ UN MESAJ ❤️</p>
+
+    <h2>Apasă pe inimioară</h2>
+
+    <div class="big-heart" onclick="heartClick()">
+        ❤️
+    </div>
+
+    <p class="heart-message" id="heartMessage">
+        Apasă pe mine ❤️
+    </p>
+    
+    <div class="scroll-to-final">
+        <button onclick="scrollToFinal()">
+
+            <span>Și ultima...</span>
+        </button>
+    </div>
+
+</section>
+
+
+<section class="final-section">
+
+    <div class="final-content">
+
+        <p class="small-text">ȘI ULTIMA...</p>
+
+        <h2>Mulțumesc, că ești în viața mea, Gaby ❤️</h2>
+
+        <p>
+            Mă bucur atât de mult că am ajuns la o concluzie că nu putem fi unul fără altul 
+            și că ai devenit parte din viața mea. 
+            Eu tare sper să avem multe alte momente frumoase împreună.
+        </p>
+
+        <p>
+            Îmi doresc să zâmbești mereu, să crezi în tine și 
+            să nu uiți niciodată cât de importantă ești.
+        </p>
+
+
+        <div class="final-heart">
+            ❤️
+        </div>
+
+        <h3>La mulți ani, scumpo!</h3>
+
+    </div>
+
+</section>
+
+ <!-- JavaScript -->
+ <script src="scripts.js"></script>
+
+</body>
+</html>
