@@ -772,6 +772,55 @@ h1 {
     }
 }
 
+.scroll-to-together {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.scroll-to-together button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    background: transparent;
+    border: none;
+    box-shadow: 0 0 25px rgba(255, 77, 141, 0.5);
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 28px;
+    animation: arrowToTogether 1.5s infinite;
+}
+
+.scroll-to-together button span {
+    font-size: 14px;
+    color: #c9c5cc;
+}
+
+.scroll-to-together button:hover {
+    color: #ff4d8d;
+}
+
+@keyframes arrowToTogether {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(8px);
+    }
+}
+
+@media (max-width: 600px) {
+    .scroll-to-together {
+        margin-top: 40px;
+    }
+
+    .scroll-to-together button {
+        font-size: 25px;
+    }
+}
+
 .scroll-to-final {
     margin-top: 60px;
     display: flex;
@@ -818,5 +867,87 @@ h1 {
 
     .scroll-to-final button {
         font-size: 25px;
+    }
+}
+
+.together-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+    background: #120d16;
+}
+
+.together-section h2 {
+    font-size: 45px;
+    margin: 20px 0 50px;
+}
+
+.together-counter {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.time-box {
+    min-width: 120px;
+    padding: 25px 15px;
+    background: linear-gradient(145deg, #241326, #120d16);
+    border: 1px solid rgba(255, 77, 141, 0.35);
+    border-radius: 18px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.time-box span {
+    display: block;
+    font-size: 42px;
+    font-weight: bold;
+    color: #ff4d8d;
+}
+
+.time-box p {
+    margin-top: 8px;
+    color: #c9c5cc;
+    font-size: 14px;
+}
+
+.together-text {
+    margin-top: 45px;
+    max-width: 550px;
+    color: #c9c5cc;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+@media (max-width: 600px) {
+
+    .together-section h2 {
+        font-size: 32px;
+        margin-bottom: 35px;
+    }
+
+    .together-counter {
+        gap: 10px;
+    }
+
+    .time-box {
+        min-width: 75px;
+        padding: 18px 10px;
+    }
+
+    .time-box span {
+        font-size: 30px;
+    }
+
+    .time-box p {
+        font-size: 12px;
+    }
+
+    .together-text {
+        font-size: 16px;
     }
 }

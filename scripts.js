@@ -109,6 +109,16 @@ function scrollToHeart() {
     }
 }
 
+function scrollToTogether() {
+    const togetherSection = document.querySelector(".together-section");
+
+    if (togetherSection) {
+        togetherSection.scrollIntoView({
+            behavior: "smooth"
+        });
+    }
+}
+
 function scrollToFinal() {
     const finalSection = document.querySelector(".final-section");
 
@@ -119,3 +129,26 @@ function scrollToFinal() {
     }
 }
 
+const startDate = new Date("2026-05-18T01:11:00");
+
+function updateTogetherTime() {
+
+    const now = new Date();
+    const difference = now - startDate;
+
+    const totalSeconds = Math.floor(difference / 1000);
+
+    const days = Math.floor(totalSeconds / 86400);
+    const hours = Math.floor((totalSeconds % 86400) / 3600);
+    const minutes = Math.floor((totalSeconds % 3600) / 60);
+    const seconds = totalSeconds % 60;
+
+    document.getElementById("days").textContent = days;
+    document.getElementById("hours").textContent = hours;
+    document.getElementById("minutes").textContent = minutes;
+    document.getElementById("seconds").textContent = seconds;
+}
+
+updateTogetherTime();
+
+setInterval(updateTogetherTime, 1000);
